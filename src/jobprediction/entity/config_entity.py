@@ -27,3 +27,9 @@ class ModelTrainingConfig:
   hidden_layer_sizes:tuple
   solver:str
   report_path:str
+
+@dataclass
+class PredictionConfig:
+  model_path: str
+  encoder_path: str
+  scaler_path: str

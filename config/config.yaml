@@ -23,3 +23,13 @@ model_training:
   encoder_path: artifacts/training/model/label_encoder.pkl
   scaler_path: artifacts/training/model/scaler.pkl
   report_path: artifacts/evaluation/report.json
+
+prediction:
+
+  model_path: artifacts/training/model/job_prediction_model.pkl
+  encoder_path: artifacts/training/model/label_encoder.pkl
+  scaler_path: artifacts/training/model/scaler.pkl
+
+
+
+

@@ -1,5 +1,5 @@
 from src.jobprediction.utils.common import read_yaml_file, create_directory
-from src.jobprediction.entity.config_entity import DataIngestionConfig, DataTransformationConfig, ModelTrainingConfig
+from src.jobprediction.entity.config_entity import DataIngestionConfig, DataTransformationConfig, ModelTrainingConfig, PredictionConfig
 
 class ConfigurationManager:
   def __init__(self):
@@ -47,3 +47,12 @@ class ConfigurationManager:
         report_path=config["report_path"]
     )
     return model_training_config
+
+  def PredictionManager(self):
+    config=self.config["prediction"]
+    prediction_config=PredictionConfig(
+      model_path= config["model_path"],
+      encoder_path= config["encoder_path"],
+      scaler_path= config["scaler_path"]
+    )
+    return prediction_config

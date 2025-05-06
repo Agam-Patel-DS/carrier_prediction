@@ -5,3 +5,9 @@ seaborn
 scikit-learn
 scipy
 imbalanced-learn
+langchain
+langchain-community
+groq
+beautifulsoup4
+requests
+langchain-groq

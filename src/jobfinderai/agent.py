@@ -2,6 +2,11 @@ from langchain.agents import initialize_agent, Tool
 from langchain_groq.chat_models import ChatGroq
 from langchain.tools import tool
 from src.jobfinderai.fetch_job import fetch_jobs
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
 
 # ========== STEP 3: LangChain Agent with Groq ==========
 def run_agent(role):
